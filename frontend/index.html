@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator Prank - Create Yours</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <i class="fa-solid fa-heart heart-icon"></i>
+            <h1>Love Calculator</h1>
+            <p>Create a prank "Love Calculator" link to fool your friends! They'll think it's real, but you'll get their crush's name.</p>
+            
+            <form id="create-form">
+                <div class="form-group">
+                    <label for="creatorName">Your Name (The Prankster)</label>
+                    <input type="text" id="creatorName" name="creatorName" required placeholder="Enter your name">
+                </div>
+                <button type="submit" class="btn">Create Prank Link</button>
+            </form>
+
+            <div id="result" class="hidden">
+                <h2>Prank Created! 🎉</h2>
+                <p>Send this link to your victim:</p>
+                <div class="link-box" id="prank-link"></div>
+                <button class="btn copy-btn" id="copy-btn">Copy Link</button>
+                <br><br>
+                <p>Track your victims here:</p>
+                <a href="#" id="dashboard-link" style="color: var(--primary);">Go to Dashboard</a>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

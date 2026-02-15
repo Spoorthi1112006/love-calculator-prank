@@ -1,0 +1,10 @@
+try { require('express'); console.log('express OK'); } catch (e) { console.error('express FAIL', e.message); }
+try { require('express').Router(); console.log('express.Router OK'); } catch (e) { console.error('express.Router FAIL', e.message); }
+try { require('express-validator').body; console.log('express-validator OK'); } catch (e) { console.error('express-validator FAIL', e.message); }
+try { require('express-rate-limit'); console.log('express-rate-limit OK'); } catch (e) { console.error('express-rate-limit FAIL', e.message); }
+try { require('bcryptjs'); console.log('bcryptjs OK'); } catch (e) { console.error('bcryptjs FAIL', e.message); }
+try { require('uuid').v4; console.log('uuid OK'); } catch (e) { console.error('uuid FAIL', e.message); }
+try { require('twilio'); console.log('twilio OK'); } catch (e) { console.error('twilio FAIL', e.message); }
+try { require('../models/Prank'); console.log('Prank OK'); } catch (e) { console.error('Prank FAIL', e.message); }
+try { require('../models/Submission'); console.log('Submission OK'); } catch (e) { console.error('Submission FAIL', e.message); }
+try { require('../models/OTP'); console.log('OTP OK'); } catch (e) { console.error('OTP FAIL', e.message); }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Love Calculator 💖</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="main-card">
+            <i class="fa-solid fa-heart heart-icon" id="heart-anim"></i>
+            <h1>Love Calculator</h1>
+
+            <!-- STEP 1: Phone & Consent -->
+            <div id="step-1" class="step">
+                <p>Find out your true love compatibility! Enter your phone number to verify you're human and get your
+                    result.</p>
+                <form id="phone-form">
+                    <div class="form-group">
+                        <label for="phoneNumber">Mobile Number</label>
+                        <input type="tel" id="phoneNumber" placeholder="+1234567890" required>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">This application will collect your phone number and submitted data for
+                            prank and entertainment purposes. By continuing, you agree.</label>
+                    </div>
+
+                    <button type="submit" class="btn">Get Code</button>
+                </form>
+            </div>
+
+            <!-- STEP 2: OTP -->
+            <div id="step-2" class="step hidden">
+                <p>Enter the verification code sent to your phone.</p>
+                <form id="otp-form">
+                    <div class="form-group">
+                        <label>Verification Code</label>
+                        <input type="text" id="otp" maxlength="6" placeholder="123456" required>
+                    </div>
+                    <button type="submit" class="btn">Verify</button>
+                    <button type="button" class="btn"
+                        style="background: transparent; border: 1px solid white; margin-top: 10px;"
+                        id="back-btn">Back</button>
+                </form>
+            </div>
+
+            <!-- STEP 3: The "Trap" (Names) -->
+            <div id="step-3" class="step hidden">
+                <p>Who is your secret crush? 💘</p>
+                <form id="names-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="victimName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Crush's Name</label>
+                        <input type="text" id="crushName" required>
+                    </div>
+                    <button type="submit" class="btn">CALCULATE LOVE ❤️</button>
+                </form>
+            </div>
+
+            <!-- STEP 4: Loading -->
+            <div id="step-4" class="step hidden">
+                <h2>Calculating...</h2>
+                <div class="progress-bar-container"
+                    style="width: 100%; background: rgba(255,255,255,0.2); height: 10px; border-radius: 5px; overflow: hidden; margin: 20px 0;">
+                    <div id="progress-bar"
+                        style="width: 0%; height: 100%; background: var(--primary); transition: width 0.1s;"></div>
+                </div>
+                <p id="loading-text">Analyzing names...</p>
+            </div>
+
+            <!-- STEP 5: Result & Prank Reveal -->
+            <div id="step-5" class="step hidden">
+                <div class="result-box">
+                    <div class="score" id="score">0%</div>
+                    <p id="result-text">Perfect Match!</p>
+                </div>
+
+                <div class="prank-reveal hidden" id="prank-reveal">
+                    <h3>YOU GOT PRANKED! 😜</h3>
+                    <p>By <span id="prankster-name">...</span></p>
+                    <p style="font-size: 0.9rem;">(They now know your crush is <span id="crush-reveal">...</span>!)</p>
+                    <br>
+                    <a href="/" class="btn" style="display:inline-block; text-decoration:none;">Prank Someone Else!</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/prank.js"></script>
+</body>
+
+</html>

